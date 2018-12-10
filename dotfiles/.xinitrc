@@ -1,1 +1,0 @@
-/home/bluesteelblade/.xinitrc
