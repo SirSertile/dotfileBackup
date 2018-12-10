@@ -8,6 +8,7 @@
 #. /etc/X11/Xsession
 
 #TESTING GITHUB FUNCTIONALITY AGAIN MOTHERFUCKER
+# ARE YOU SURE
 
 xset +fp /home/bluesteelblade/.fonts &
 xset +fp /home/bluesteelblade/.fonts/bitmap/ctrld-font &
