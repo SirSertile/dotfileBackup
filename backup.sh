@@ -9,7 +9,8 @@ xterm -e "cd $HOME/Documents/DotfileBackup;\
 git init; \
 git add ./dotfiles; \
 git commit -m 'automatically pushed at $(date)';\
-git push -u origin master; read"
+git push -u origin master;\
+sleep 1"
 herbstclient close_or_remove
 herbstclient use $inittag
 herbstclient merge_tag BACKUP $inittag
