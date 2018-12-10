@@ -19,7 +19,7 @@ mkdir dotfiles
 
 xterm -e "cd $HOME/Documents/DotfileBackup;\
 git init; \
-git add ./dotfiles; \
+git add --all; \
 git commit -m 'automatically pushed at $(date)';\
 git push -u origin master;\
 sleep 1"
