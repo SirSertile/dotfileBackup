@@ -6,8 +6,8 @@ herbstclient use BACKUP
 #linking of files
 #copy the current dotfiles to the current address, then delete them and symlink them? 
 xterm -e "cd $HOME/Documents/DotfileBackup; \
-rm -r DotfileBackup/dotfiles ;\ 
-mkdir DotfileBackup/dotfiles ;\ 
+rm -r .dotfiles ;\ 
+mkdir ./dotfiles ;\ 
 cd ./dotfiles ;\ 
 cp $HOME/.xinitrc .xinitrc; read"
 #cp $HOME/.config/herbstluftwm/autostart .DotfileBackup/dotfiles/autostart
