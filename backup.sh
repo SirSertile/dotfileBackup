@@ -4,6 +4,7 @@ inittag="$(herbstclient attr tags.focus.name)"
 herbstclient add BACKUP
 herbstclient use BACKUP
 cd $HOME/DotfileBackup
+bash ./link.sh
 xterm -e "cd $HOME/Documents/DotfileBackup;\
 git init; \
 git add ./dotfiles; \
