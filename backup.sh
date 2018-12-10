@@ -12,8 +12,8 @@ cp $HOME/.config/lemonbar.sh DotfileBackup/dotfiles/lemonbar.sh
 cp $HOME/.config/scriptswitcher.sh DotfileBackup/dotfiles/scriptswitcher.sh
 cp $HOME/XTerm DotfileBackup/dotfiles/XTerm
 cp $HOME/.Xresources DotfileBackup/dotfiles/.Xresources
-rm -r dotfiles
-mkdir dotfiles
+rm -r DotfileBackup/dotfiles
+mkdir DotfileBackup/dotfiles
 
 #USER INTERFACE HERE FOR GITHUB LOGIN
 
