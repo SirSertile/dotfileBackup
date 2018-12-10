@@ -31,8 +31,8 @@ herbstclient use $inittag
 herbstclient merge_tag BACKUP $inittag
 
 #make symlinks for them to keep around for editability 
-rm -r ./dotfiles
-mkdir ./dotfiles
+rm -r ../dotfiles
+mkdir ../dotfiles
 ln -s $HOME/.xinitrc ./.xinitrc
 ln -s $HOME/.config/herbstluftwm/autostart ./autostart
 ln -s $HOME/.config/lemonbar.sh ./lemonbar.sh
