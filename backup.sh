@@ -5,16 +5,17 @@ herbstclient add BACKUP
 herbstclient use BACKUP
 #linking of files
 #copy the current dotfiles to the current address, then delete them and symlink them? 
-xterm -e "cd $HOME/Documents/DotfileBackup; \
-rm -r ./dotfiles ;\ 
-mkdir ./dotfiles ;\ 
-cd ./dotfiles ;\ 
-cp $HOME/.xinitrc .xinitrc; read"
-cp $HOME/.config/herbstluftwm/autostart autostart
-cp $HOME/.config/lemonbar.sh lemonbar.sh
-cp $HOME/.config/scriptswitcher.sh scriptswitcher.sh
-cp $HOME/XTerm XTerm
-cp $HOME/.Xresources .Xresources
+cd $HOME/Documents/DotfileBackup
+rm -r ./dotfiles
+mkdir ./dotfiles
+cd ./dotfiles 
+xterm -e "\
+cp $HOME/.xinitrc .xinitrc;\
+cp $HOME/.config/herbstluftwm/autostart autostart;\
+cp $HOME/.config/lemonbar.sh lemonbar.sh;\
+cp $HOME/.config/scriptswitcher.sh scriptswitcher.sh;\
+cp $HOME/XTerm XTerm;\
+cp $HOME/.Xresources .Xresources;read"
 
 
 #USER INTERFACE HERE FOR GITHUB LOGIN

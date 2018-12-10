@@ -1,0 +1,6 @@
+rofi.color-normal: #3A3A3A, #212121, #3a3a3a, #3a3a3a, #002cff
+rofi.color-window: #3a3a3a, #3a3a3a, #212121
+rofi.color-active: #3a3a3a, #3a3a3a, #212121
+rofi.color-urgent: #3a3a3a, #3a3a3a, #212121
+#rofi.font:'-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1'
+#rofi.font:'-ctrld-fixed-medium-r-normal--16-100-96-96-c-80-iso10646-1'
