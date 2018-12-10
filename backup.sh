@@ -9,13 +9,13 @@ cd $HOME/Documents/DotfileBackup
 rm -r ./dotfiles
 mkdir ./dotfiles
 cd ./dotfiles 
-xterm -e "\
-cp $HOME/.xinitrc .xinitrc;\
-cp $HOME/.config/herbstluftwm/autostart autostart;\
-cp $HOME/.config/lemonbar.sh lemonbar.sh;\
-cp $HOME/.config/scriptswitcher.sh scriptswitcher.sh;\
-cp $HOME/XTerm XTerm;\
-cp $HOME/.Xresources .Xresources;read"
+
+cp $HOME/.xinitrc .xinitrc
+cp $HOME/.config/herbstluftwm/autostart autostart
+cp $HOME/.config/lemonbar.sh lemonbar.sh
+cp $HOME/.config/scriptswitcher.sh scriptswitcher.sh
+cp $HOME/XTerm XTerm
+cp $HOME/.Xresources .Xresources
 
 
 #USER INTERFACE HERE FOR GITHUB LOGIN
