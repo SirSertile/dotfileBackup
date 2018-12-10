@@ -9,7 +9,7 @@ xterm -e "cd $HOME/Documents/DotfileBackup; \
 rm -r ./dotfiles ;\ 
 mkdir ./dotfiles ;\ 
 cd ./dotfiles ;\ 
-cp $HOME/.xinitrc .xinitrc;"
+cp $HOME/.xinitrc .xinitrc; read"
 cp $HOME/.config/herbstluftwm/autostart autostart
 cp $HOME/.config/lemonbar.sh lemonbar.sh
 cp $HOME/.config/scriptswitcher.sh scriptswitcher.sh
