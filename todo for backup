@@ -1,0 +1,4 @@
+To-do 
+Get Crontab working
+Find files to automatically backup - dotfiles, .xinitrc, .xresources, autostart, lemonbar, etc
+write script to commit/push them to the cloud
