@@ -32,7 +32,7 @@ herbstclient merge_tag BACKUP $inittag
 
 #make symlinks for them to keep around for editability 
 xterm -e "rm -r ./dotfiles ;\
-mkdir ./dotfiles" 
+mkdir ./dotfiles; read" 
 #THIS SHIT BROKEN 
 #ln -s $HOME/.xinitrc .xinitrc
 #ln -s $HOME/.config/herbstluftwm/autostart ./autostart
