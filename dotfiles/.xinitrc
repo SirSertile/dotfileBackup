@@ -7,9 +7,6 @@
 # invoke global X session script
 #. /etc/X11/Xsession
 
-#TESTING GITHUB FUNCTIONALITY AGAIN MOTHERFUCKER
-# ARE YOU SURE
-
 xset +fp /home/bluesteelblade/.fonts &
 xset +fp /home/bluesteelblade/.fonts/bitmap/ctrld-font &
 #xset +fp /home/bluesteelblade/.fonts/bitmap &
@@ -28,5 +25,5 @@ compton --config .config/compton/compton.conf &
 #rofi.color-window: #3a3a3a, #3a3a3a, #212121 &
 #rofi.color-active: #3a3a3a, #3a3a3a, #212121 &
 #rofi.color-urgent: #3a3a3a, #3a3a3a, #212121 &
-
-exec herbstluftwm --locked 
+#sleep 2 &
+exec herbstluftwm --locked
