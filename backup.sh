@@ -6,11 +6,11 @@ herbstclient use BACKUP
 cd $HOME/DotfileBackup
 #linking of files
 #copy the current dotfiles to the current address, then delete them and symlink them? 
-rm -r DotfileBackup/dotfiles
-mkdir DotfileBackup/dotfiles
-cd ./dotfiles
-cp $HOME/.xinitrc .xinitrc
-cp $HOME/.config/herbstluftwm/autostart .DotfileBackup/dotfiles/autostart
+xterm -e "rm -r DotfileBackup/dotfiles ;\ 
+mkdir DotfileBackup/dotfiles ;\ 
+cd ./dotfiles ;\ 
+cp $HOME/.xinitrc .xinitrc"
+#cp $HOME/.config/herbstluftwm/autostart .DotfileBackup/dotfiles/autostart
 #cp $HOME/.config/lemonbar.sh ./dotfiles
 #cp $HOME/.config/scriptswitcher.sh DotfileBackup/dotfiles
 #cp $HOME/XTerm DotfileBackup/dotfiles
