@@ -3,10 +3,10 @@
 inittag="$(herbstclient attr tags.focus.name)"
 herbstclient add BACKUP
 herbstclient use BACKUP
-cd $HOME/DotfileBackup
 #linking of files
 #copy the current dotfiles to the current address, then delete them and symlink them? 
-xterm -e "rm -r DotfileBackup/dotfiles ;\ 
+xterm -e "cd $HOME/DotfileBackup; \
+rm -r DotfileBackup/dotfiles ;\ 
 mkdir DotfileBackup/dotfiles ;\ 
 cd ./dotfiles ;\ 
 cp $HOME/.xinitrc .xinitrc; read"
