@@ -8,8 +8,8 @@ cd $HOME/DotfileBackup
 #copy the current dotfiles to the current address, then delete them and symlink them? 
 rm -r DotfileBackup/dotfiles
 mkdir DotfileBackup/dotfiles
-cp $HOME/.xinitrc ./DotfileBackup/dotfiles
-cp $HOME/.config/herbstluftwm/autostart ./dotfiles
+cp $HOME/.xinitrc ./DotfileBackup/dotfiles/.xinitrc
+cp $HOME/.config/herbstluftwm/autostart ./dotfiles/autostart
 cp $HOME/.config/lemonbar.sh ./dotfiles
 cp $HOME/.config/scriptswitcher.sh DotfileBackup/dotfiles
 cp $HOME/XTerm DotfileBackup/dotfiles
