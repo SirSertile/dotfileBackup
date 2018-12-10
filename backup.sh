@@ -31,12 +31,13 @@ herbstclient use $inittag
 herbstclient merge_tag BACKUP $inittag
 
 #make symlinks for them to keep around for editability 
-xterm -e "rm -r ./dotfiles ; ls;\
-mkdir ./dotfiles; read" 
+cd .. 
+rm -r ./dotfiles
+mkdir ./dotfiles 
 #THIS SHIT BROKEN 
-#ln -s $HOME/.xinitrc .xinitrc
-#ln -s $HOME/.config/herbstluftwm/autostart ./autostart
-#ln -s $HOME/.config/lemonbar.sh ./lemonbar.sh
-#ln -s $HOME/.config/scriptswitcher.sh ./scriptswitcher.sh
-#ln -s $HOME/XTerm ./XTerm
-#ln -s $HOME/.Xresources ./.Xresources
+ln -s $HOME/.xinitrc .xinitrc
+ln -s $HOME/.config/herbstluftwm/autostart ./autostart
+ln -s $HOME/.config/lemonbar.sh ./lemonbar.sh
+ln -s $HOME/.config/scriptswitcher.sh ./scriptswitcher.sh
+ln -s $HOME/XTerm ./XTerm
+ln -s $HOME/.Xresources ./.Xresources
