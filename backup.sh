@@ -6,13 +6,13 @@ herbstclient use BACKUP
 cd $HOME/DotfileBackup
 #linking of files
 #copy the current dotfiles to the current address, then delete them and symlink them? 
+rm -r DotfileBackup/dotfiles
 cp $HOME/.xinitrc DotfileBackup/dotfiles/.xinitrc
 cp $HOME/.config/herbstluftwm/autostart DotfileBackup/dotfiles/autostart
 cp $HOME/.config/lemonbar.sh DotfileBackup/dotfiles/lemonbar.sh
 cp $HOME/.config/scriptswitcher.sh DotfileBackup/dotfiles/scriptswitcher.sh
 cp $HOME/XTerm DotfileBackup/dotfiles/XTerm
 cp $HOME/.Xresources DotfileBackup/dotfiles/.Xresources
-rm -r DotfileBackup/dotfiles
 mkdir DotfileBackup/dotfiles
 
 #USER INTERFACE HERE FOR GITHUB LOGIN
