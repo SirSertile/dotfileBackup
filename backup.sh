@@ -9,11 +9,11 @@ cd $HOME/DotfileBackup
 rm -r DotfileBackup/dotfiles
 mkdir DotfileBackup/dotfiles
 cp $HOME/.xinitrc ./DotfileBackup/dotfiles/.xinitrc
-cp $HOME/.config/herbstluftwm/autostart ./dotfiles/autostart
-cp $HOME/.config/lemonbar.sh ./dotfiles
-cp $HOME/.config/scriptswitcher.sh DotfileBackup/dotfiles
-cp $HOME/XTerm DotfileBackup/dotfiles
-cp $HOME/.Xresources DotfileBackup/dotfiles
+cp $HOME/.config/herbstluftwm/autostart .DotfileBackup/dotfiles/autostart
+#cp $HOME/.config/lemonbar.sh ./dotfiles
+#cp $HOME/.config/scriptswitcher.sh DotfileBackup/dotfiles
+#cp $HOME/XTerm DotfileBackup/dotfiles
+#cp $HOME/.Xresources DotfileBackup/dotfiles
 
 
 #USER INTERFACE HERE FOR GITHUB LOGIN
