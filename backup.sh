@@ -4,11 +4,12 @@ inittag="$(herbstclient attr tags.focus.name)"
 herbstclient add BACKUP
 herbstclient use BACKUP
 #linking of files
-#copy the current dotfiles to the current address, then delete them and symlink them? 
+#copy the current dotfiles to the current address, then delete them after
 cd $HOME/Documents/DotfileBackup
+#clears the dotfiles directory of symlinks, remakes it and then copies the files over
 rm -r ./dotfiles
 mkdir ./dotfiles
-cd ./dotfiles 
+cd ./dotfiles
 
 cp $HOME/.xinitrc .xinitrc
 cp $HOME/.config/herbstluftwm/autostart autostart
@@ -30,11 +31,14 @@ herbstclient close_or_remove
 herbstclient use $inittag
 herbstclient merge_tag BACKUP $inittag
 
-#make symlinks for them to keep around for editability 
-cd .. 
+#make symlinks for them to keep around for editability
+
+#clears directory then goes inside it
+cd ..
 rm -r ./dotfiles
-mkdir ./dotfiles 
-#THIS SHIT BROKEN 
+mkdir ./dotfiles
+cd ./dotfiles
+#making symlinks
 ln -s $HOME/.xinitrc .xinitrc
 ln -s $HOME/.config/herbstluftwm/autostart ./autostart
 ln -s $HOME/.config/lemonbar.sh ./lemonbar.sh
