@@ -31,7 +31,7 @@ herbstclient use $inittag
 herbstclient merge_tag BACKUP $inittag
 
 #make symlinks for them to keep around for editability 
-xterm -e "rm -r ./dotfiles ;\
+xterm -e "rm -r ./dotfiles ; ls;\
 mkdir ./dotfiles; read" 
 #THIS SHIT BROKEN 
 #ln -s $HOME/.xinitrc .xinitrc
