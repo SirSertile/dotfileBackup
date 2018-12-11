@@ -33,11 +33,15 @@ hc keybind $Mod-Return spawn ${TERMINAL:-xterm -font '-ctrld-fixed-medium-r-norm
 
 #FANCY KEYBINDS HERE
 hc keybind $Mod-Control-Return spawn rofi -lines 5 -modi "run" -show run 
-hc keybind $Mod-Shift-w spawn bash /home/bluesteelblade/.config/scriptswitcher.sh
 hc keybind $Mod-l spawn bash -c "pkill -u bluesteelblade; logout"
 hc keybind $Mod-k spawn bash -c "systemctl sleep"
 hc keybind $Mod-Shift-p spawn deepin-scrot -f
-hc keybind $Mod-b spawn bash /home/bluesteelblade/Documents/DotfileBackup/backup.sh
+
+#RUNNING CUSTOM SCRIPTS
+#scriptswitcher shows a rofi dialog to pick different options
+hc keybind $Mod-Shift-w spawn bash $HOME/.config/scriptswitcher.sh
+#autobackup for dotfiles to github
+hc keybind $Mod-b spawn bash $HOME/Documents/DotfileBackup/backup.sh
 
 #AUDIO TIME
 hc keybind $Mod-F3 spawn amixer -c 1 sset Master playback 1%+ 
