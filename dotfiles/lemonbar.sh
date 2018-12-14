@@ -48,6 +48,7 @@ textcolor(){
 titlecolor(){
 	echo "#3a3a3a"
 }
+
 alertcolor(){
 	echo "#f28a98"
 }
@@ -85,7 +86,7 @@ alertbar(){
 			ALERTS="$ALERTS EXT-BAT-LOW"
 		fi
 
-		if [ $TEMP -gt = 85 ]
+		if [ $TEMP -gt = 75 ]
 		then
 			ALERTS="$ALERTS CPU-HOT"
 		fi
@@ -102,7 +103,7 @@ alertbar(){
 
 
 
-leftbar | lemonbar -g 310x20+5+5 -B#5c5c5c \
+leftbar | lemonbar -g 320x20+5+5 -B#5c5c5c \
 -p -f '-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1' \
 -f '-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1' &
 #-f 'sans-serif:size=9' 
