@@ -1,11 +1,16 @@
 #curl wttr.in; read
-list=(Weather "Calendar(all)" "Calendar(school)" "Calendar(personal)" "Calendar(work)")
-main=''
-for index in ${!list[*]}
-do
-	main="$main${list[$index]}\n"
-done
-input="$(echo -e $main | rofi -dmenu -lines 5)"
+list=("Weather" "Calendar(all)" "Calendar(school)" "Calendar(personal)" "Calendar(work)")
+function disprofi {
+	args=($(echo "$@" | tr ' ' '\n'))
+	main=''
+	for index in ${!args[*]}
+	do
+		main="$main${args[$index]}\n"
+	done
+	input="$(echo -e $main | rofi -dmenu -lines 5)"
+	echo $input
+}
+input=$(disprofi ${list[*]})
 inittag="$(herbstclient attr tags.focus.name)"
 active="#002cff"
 transparent="#212121"
@@ -29,7 +34,7 @@ case $input in
 	command="gcalcli calw 1 --configFolder /home/bluesteelblade/.config/gcalcli/ --calendar 'rezdevhead@gmail.com'"
 	;;
 *)
-	command=$input
+	command="echo $input not workin"
 	;;
 esac
 xterm -e "$command ; read"
