@@ -1,6 +1,11 @@
 #curl wttr.in; read
-options="Weather\nCalendar(all)\nCalendar(school)\nCalendar(personal)\nCalendar(work)"
-input="$(echo -e $options | rofi -dmenu -lines 5)"
+list=(Weather "Calendar(all)" "Calendar(school)" "Calendar(personal)" "Calendar(work)")
+main=''
+for index in ${!list[*]}
+do
+	main="$main${list[$index]}\n"
+done
+input="$(echo -e $main | rofi -dmenu -lines 5)"
 inittag="$(herbstclient attr tags.focus.name)"
 active="#002cff"
 transparent="#212121"

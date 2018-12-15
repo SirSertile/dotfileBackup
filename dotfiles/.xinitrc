@@ -11,7 +11,7 @@ xset +fp /home/bluesteelblade/.fonts &
 xset +fp /home/bluesteelblade/.fonts/bitmap/ctrld-font &
 #xset +fp /home/bluesteelblade/.fonts/bitmap &
 xset fp rehash &
-fc-cache -fv &
+#fc-cache -fv &
 
 ~/.fehbg &
 
