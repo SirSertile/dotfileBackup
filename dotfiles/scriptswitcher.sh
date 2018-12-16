@@ -22,7 +22,7 @@ function scrapedir {
 case $(disprofi ${list[*]}) in
 #WEATHER
 "${list[0]}")
-	command="curl wttr.in/?m"
+	command="curl wttr.in/?m;read"
 	;;
 #CALENDAR
 "${list[1]}")
@@ -44,6 +44,7 @@ case $(disprofi ${list[*]}) in
 			command="gcalcli calw 1 --configFolder /home/bluesteelblade/.config/gcalcli/ --calendar 'rezdevhead@gmail.com'"
 		;;
 	esac
+	command="$command;read"
 	;;
 #GAMES
 "${list[2]}")
@@ -53,8 +54,7 @@ case $(disprofi ${list[*]}) in
 	echo $game
 	if [ "$game" != "" ]
 	then
-		command="cd $HOME/$gamedir; flashplayer $game"
-		echo $command
+		bashcommand="cd $HOME/$gamedir; flashplayer $game"
 	fi
 ;;
 *)
@@ -68,9 +68,12 @@ transparent="#212121"
 normal="3a3a3a"
 herbstclient add EXTRA
 herbstclient use EXTRA
-
-xterm -e "$command ; read"
-
+if [ $bashcommand == "" ]
+then
+	xterm -e "$command"
+else
+	bash -c "$bashcommand"
+fi
 herbstclient close_or_remove
 herbstclient use $inittag
 herbstclient merge_tag EXTRA $inittag
