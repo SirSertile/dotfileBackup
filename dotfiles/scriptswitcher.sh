@@ -1,6 +1,8 @@
-#curl wttr.in; read
-list=("Weather" "Calendar" "Calendar(all)" "Calendar(school)" "Calendar(personal)" "Calendar(work)")
+#!/bin/bash
+#defines lists for rofi
+list=("Weather" "Calendar" "Games")
 calendar=("All" "School" "Personal" "Work")
+#function takes a list and displays rofi with all the stuff in the lists
 function disprofi {
 	args=($(echo "$@" | tr ' ' '\n'))
 	main=''
@@ -12,10 +14,17 @@ function disprofi {
 	echo $input
 }
 
+#scrapes contents of a dir with ls
+function scrapedir {
+	echo $(ls $HOME/$1)
+}
+#main switching statement
 case $(disprofi ${list[*]}) in
+#WEATHER
 "${list[0]}")
 	command="curl wttr.in/?m"
 	;;
+#CALENDAR
 "${list[1]}")
 	case $(disprofi ${calendar[*]}) in
 		#ALL
@@ -36,6 +45,18 @@ case $(disprofi ${list[*]}) in
 		;;
 	esac
 	;;
+#GAMES
+"${list[2]}")
+	gamedir="Documents/games/flash"
+	gamelist=($(scrapedir $gamedir))
+	game=$(disprofi ${gamelist[*]})
+	echo $game
+	if [ "$game" != "" ]
+	then
+		command="cd $HOME/$gamedir; flashplayer $game"
+		echo $command
+	fi
+;;
 *)
 	command=""
 	;;
