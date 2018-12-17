@@ -67,14 +67,19 @@ inittag="$(herbstclient attr tags.focus.name)"
 active="#002cff"
 transparent="#212121"
 normal="3a3a3a"
-herbstclient add EXTRA
-herbstclient use EXTRA
 if [ "$bashcommand" == "" ]
 then
+	herbstclient add EXTRA
+	herbstclient use EXTRA
 	xterm -e "$command"
+	herbstclient close_or_remove
+	herbstclient use $inittag
+	herbstclient merge_tag EXTRA $inittag
 else
+	herbstclient add EXTRA
+	herbstclient use EXTRA
 	bash -c "$bashcommand"
+	herbstclient close_or_remove
+	herbstclient use $inittag
+	herbstclient merge_tag EXTRA $inittag
 fi
-herbstclient close_or_remove
-herbstclient use $inittag
-herbstclient merge_tag EXTRA $inittag
