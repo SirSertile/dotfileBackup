@@ -18,7 +18,9 @@ function disprofi {
 function scrapedir {
 	echo $(ls $HOME/$1)
 }
+
 #main switching statement
+bashcommand=""
 case $(disprofi ${list[*]}) in
 #WEATHER
 "${list[0]}")
@@ -51,7 +53,6 @@ case $(disprofi ${list[*]}) in
 	gamedir="Documents/games/flash"
 	gamelist=($(scrapedir $gamedir))
 	game=$(disprofi ${gamelist[*]})
-	echo $game
 	if [ "$game" != "" ]
 	then
 		bashcommand="cd $HOME/$gamedir; flashplayer $game"
@@ -68,7 +69,7 @@ transparent="#212121"
 normal="3a3a3a"
 herbstclient add EXTRA
 herbstclient use EXTRA
-if [ $bashcommand == "" ]
+if [ "$bashcommand" == "" ]
 then
 	xterm -e "$command"
 else
