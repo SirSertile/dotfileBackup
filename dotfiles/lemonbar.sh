@@ -86,7 +86,7 @@ alertbar(){
 			ALERTS="$ALERTS EXT-BAT-LOW"
 		fi
 
-		if [ $TEMP -gt 75 ]
+		if [ $TEMP -gt 75000 ]
 		then
 			ALERTS="$ALERTS CPU-HOT"
 		fi
