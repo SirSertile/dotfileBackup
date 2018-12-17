@@ -12,7 +12,14 @@ network() {
 		/usr/bin/printf  "\ue0f0" || /usr/bin/printf " "
 }
 volume() {
-	amixer -c 1 get Master | awk '/Mono: Playback/ {print $4}' | tr -d '[]%,'
+	volume=$(amixer -c 1 get Master | awk '/Mono: Playback/ {print $4}' | tr -d '[]%,')
+	if [ "$(amixer -c 1 get Master | grep -c off)" -eq "0" ]
+	then
+		echo $volume
+	else
+		/usr/bin/printf "\ue202"
+	fi
+	#FIND A BETTER VOLUME SYMBOL DAMMIT
 }
 Heat() {
 	HEAT=$(acpi -t | cut -d, -f2 | cut -c 1-5)
