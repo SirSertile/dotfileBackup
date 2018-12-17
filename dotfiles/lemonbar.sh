@@ -17,9 +17,10 @@ volume() {
 	then
 		echo $volume
 	else
-		/usr/bin/printf "\ue202"
+		echo 00
+		#/usr/bin/printf "\ue202"
 	fi
-	#FIND A BETTER VOLUME SYMBOL DAMMIT
+	#\ue202 is a mute symbol
 }
 Heat() {
 	HEAT=$(acpi -t | cut -d, -f2 | cut -c 1-5)
