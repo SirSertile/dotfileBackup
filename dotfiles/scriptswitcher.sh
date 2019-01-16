@@ -1,6 +1,6 @@
 #!/bin/bash
 #defines lists for rofi
-list=("Weather" "Calendar" "Games")
+list=("Weather" "Calendar" "Bookmarks" "Games")
 calendar=("All" "School" "Personal" "Work")
 #function takes a list and displays rofi with all the stuff in the lists
 function disprofi {
@@ -48,8 +48,20 @@ case $(disprofi ${list[*]}) in
 	esac
 	command="$command;read"
 	;;
-#GAMES
 "${list[2]}")
+	quteargs=""
+	urls=()
+	names=()
+	#scrape stuff from  the quickmarks file and put into a list to use for disprofi
+	combinedtext=($(cat $HOME/.config/qutebrowser/quickmarks | tr '\n' ' '))
+	for index in ${!args[*]}
+	do
+		main="$main${args[$index]}\n"
+	done
+	exec qutebrowser $quteargs  
+;;
+#GAMES
+"${list[3]}")
 	gamedir="Documents/games/flash"
 	gamelist=($(scrapedir $gamedir))
 	game=$(disprofi ${gamelist[*]})
