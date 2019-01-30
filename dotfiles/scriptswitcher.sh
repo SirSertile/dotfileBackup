@@ -49,11 +49,13 @@ case $(disprofi ${list[*]}) in
 	command="$command;read"
 	;;
 "${list[2]}")
+	#handles bookmarks
 	urls=()
 	names=()
-	#combinedtext=$(cat $HOME/.config/qutebrowser/quickmarks | tr "\n" " ")
+	#pulls the text from the quickmarks file
 	quickmarks="$HOME/.config/qutebrowser/quickmarks"
 	linecount=$(wc -l < $quickmarks)
+	#iterates through lines 
 	for i in $(seq 0 $linecount)
 	do
 		linetext=($(awk 'NR=="'"$i"'"' $quickmarks))
@@ -77,8 +79,6 @@ case $(disprofi ${list[*]}) in
 				fi
 			fi
 		done
-		echo "NAME BELOW"
-		echo $name
 		names+=($name)
 		name=''
 	done
