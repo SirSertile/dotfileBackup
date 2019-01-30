@@ -34,12 +34,12 @@ case $(disprofi ${list[*]}) in
 			command="gcalcli calw 1 --configFolder /home/bluesteelblade/.config/gcalcli/ --calendar 'Class of 2022 Events' --calendar 'LCDI shifts' --calendar 'rezdevhead@gmail.com' --calendar 'david.serate@mymail.champlain.edu' --calendar 'Champlain Fall 2018 Semester'"
 		;;
 		#WORK
-		${calendar[1]})
+		${calendar[2]})
 			command="gcalcli calw 1 --configFolder /home/bluesteelblade/.config/gcalcli/ --calendar 'LCDI shifts'"
 		;;
 		#SCHOOL
-		${calendar[2]})
-			command="gcalcli calw 1 --configFolder /home/bluesteelblade/.config/gcalcli/ --calendar 'Class of 2022 Events' --calendar 'LCDI shifts' --calendar 'david.serate@mymail.champlain.edu' --calendar 'Champlain Fall 2018 Semester'"
+		${calendar[1]})
+			command="gcalcli calw 1 --configFolder /home/bluesteelblade/.config/gcalcli/ --calendar 'Class of 2022 Events' --calendar 'LCDI shifts' --calendar 'david.serate@mymail.champlain.edu' --calendar 'Champlain Fall 2018'"
 		;;
 		#PERSONAL
 		${calendar[3]})
@@ -49,16 +49,48 @@ case $(disprofi ${list[*]}) in
 	command="$command;read"
 	;;
 "${list[2]}")
-	quteargs=""
 	urls=()
 	names=()
-	#scrape stuff from  the quickmarks file and put into a list to use for disprofi
-	combinedtext=($(cat $HOME/.config/qutebrowser/quickmarks | tr '\n' ' '))
-	for index in ${!args[*]}
+	#combinedtext=$(cat $HOME/.config/qutebrowser/quickmarks | tr "\n" " ")
+	quickmarks="$HOME/.config/qutebrowser/quickmarks"
+	linecount=$(wc -l < $quickmarks)
+	for i in $(seq 0 $linecount)
 	do
-		main="$main${args[$index]}\n"
+		linetext=($(awk 'NR=="'"$i"'"' $quickmarks))
+		url=${linetext[-1]}
+		urls+=($url)
+		#fill up the name and URL lists
+		for j in ${!linetext[*]}
+		do
+			if [ "${linetext[$j]}" == "$url" ]
+			then
+				#if its the url exit the loop
+				break 
+			else 
+				if [ "$j" == "0" ]
+				then
+					#don't have a space on the first line
+					name+="${linetext[$j]}"
+				else
+					#this underscore makes it not FUCKING have a delimiter and be all fucky
+					name+="_${linetext[$j]}"
+				fi
+			fi
+		done
+		echo "NAME BELOW"
+		echo $name
+		names+=($name)
+		name=''
 	done
-	exec qutebrowser $quteargs  
+	inputvalue=$(disprofi ${names[*]})
+	#take inputvalue and go from name > URL and THEN go URL > qutebrowser
+	for i in ${!names[*]}
+	do
+		if [ "$inputvalue" == "${names[$i]}" ]
+		then
+			qutebrowser ${urls[$i]} --target window
+		fi
+	done
 ;;
 #GAMES
 "${list[3]}")
