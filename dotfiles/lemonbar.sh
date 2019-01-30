@@ -17,7 +17,7 @@ volume() {
 	then
 		echo $volume
 	else
-		echo 00
+		echo MM
 		#/usr/bin/printf "\ue202"
 	fi
 	#\ue202 is a mute symbol
