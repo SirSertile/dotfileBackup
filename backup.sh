@@ -17,7 +17,7 @@ cp $HOME/.config/lemonbar.sh lemonbar.sh
 cp $HOME/.config/scriptswitcher.sh scriptswitcher.sh
 cp $HOME/XTerm XTerm
 cp $HOME/.Xresources .Xresources
-
+cp $HOME/.config/qutebrowser/config.py config.py
 
 #USER INTERFACE HERE FOR GITHUB LOGIN
 
@@ -45,3 +45,4 @@ ln -s $HOME/.config/lemonbar.sh ./lemonbar.sh
 ln -s $HOME/.config/scriptswitcher.sh ./scriptswitcher.sh
 ln -s $HOME/XTerm ./XTerm
 ln -s $HOME/.Xresources ./.Xresources
+ln -s $HOME/.config/qutebrowser/config.py config.py
