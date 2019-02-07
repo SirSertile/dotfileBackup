@@ -13,8 +13,8 @@ cd ./dotfiles
 
 cp $HOME/.xinitrc .xinitrc
 cp $HOME/.config/herbstluftwm/autostart autostart
-cp $HOME/.config/lemonbar.sh lemonbar.sh
-cp $HOME/.config/scriptswitcher.sh scriptswitcher.sh
+cp $HOME/.config/customs/lemonbar.sh lemonbar.sh
+cp $HOME/.config/customs/scriptswitcher.sh scriptswitcher.sh
 cp $HOME/XTerm XTerm
 cp $HOME/.Xresources .Xresources
 cp $HOME/.config/qutebrowser/config.py config.py
@@ -41,8 +41,8 @@ cd ./dotfiles
 #making symlinks
 ln -s $HOME/.xinitrc .xinitrc
 ln -s $HOME/.config/herbstluftwm/autostart ./autostart
-ln -s $HOME/.config/lemonbar.sh ./lemonbar.sh
-ln -s $HOME/.config/scriptswitcher.sh ./scriptswitcher.sh
+ln -s $HOME/.config/customs/lemonbar.sh ./lemonbar.sh
+ln -s $HOME/.config/customs/scriptswitcher.sh ./scriptswitcher.sh
 ln -s $HOME/XTerm ./XTerm
 ln -s $HOME/.Xresources ./.Xresources
 ln -s $HOME/.config/qutebrowser/config.py config.py

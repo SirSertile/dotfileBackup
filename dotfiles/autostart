@@ -39,7 +39,7 @@ hc keybind $Mod-Shift-p spawn deepin-scrot -f
 
 #RUNNING CUSTOM SCRIPTS
 #scriptswitcher shows a rofi dialog to pick different options
-hc keybind $Mod-Mod1-Return spawn bash $HOME/.config/scriptswitcher.sh
+hc keybind $Mod-Mod1-Return spawn bash $HOME/.config/customs/scriptswitcher.sh
 #autobackup for dotfiles to github
 hc keybind $Mod-b spawn bash $HOME/Documents/DotfileBackup/backup.sh
 
@@ -194,7 +194,7 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 # hc detect_monitors
 
 #starting lemonbar
-/home/bluesteelblade/.config/lemonbar.sh
+/home/bluesteelblade/.config/customs/lemonbar.sh
 #| lemonbar -g 600x20+5+5 -B#5c5c5c \
 #-p -f '-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1' \
 #-f 'sans-serif:size=9'
