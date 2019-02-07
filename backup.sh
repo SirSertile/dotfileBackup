@@ -18,6 +18,7 @@ cp $HOME/.config/customs/scriptswitcher.sh scriptswitcher.sh
 cp $HOME/XTerm XTerm
 cp $HOME/.Xresources .Xresources
 cp $HOME/.config/qutebrowser/config.py config.py
+cp $HOME/.bash_profile .bash_profile
 
 #USER INTERFACE HERE FOR GITHUB LOGIN
 
@@ -46,3 +47,4 @@ ln -s $HOME/.config/customs/scriptswitcher.sh ./scriptswitcher.sh
 ln -s $HOME/XTerm ./XTerm
 ln -s $HOME/.Xresources ./.Xresources
 ln -s $HOME/.config/qutebrowser/config.py config.py
+ln -s $HOME/.bash_profile .bash_profile
