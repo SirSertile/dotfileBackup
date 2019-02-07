@@ -1,4 +1,7 @@
 #!/bash/sh
+#Script automatically copies my dotfiles to a folder and backs them up to Github.
+#Leaves behind symlinked files.
+
 #copy files to the directory
 inittag="$(herbstclient attr tags.focus.name)"
 herbstclient add BACKUP
@@ -15,9 +18,11 @@ cp $HOME/.xinitrc .xinitrc
 cp $HOME/.config/herbstluftwm/autostart autostart
 cp $HOME/.config/customs/lemonbar.sh lemonbar.sh
 cp $HOME/.config/customs/scriptswitcher.sh scriptswitcher.sh
+cp $HOME/.config/customs/status.sh status.sh
 cp $HOME/XTerm XTerm
 cp $HOME/.Xresources .Xresources
 cp $HOME/.config/qutebrowser/config.py config.py
+cp $HOME/.config/qutebrowser/quickmarks quickmarks
 cp $HOME/.bash_profile .bash_profile
 
 #USER INTERFACE HERE FOR GITHUB LOGIN
@@ -44,7 +49,9 @@ ln -s $HOME/.xinitrc .xinitrc
 ln -s $HOME/.config/herbstluftwm/autostart ./autostart
 ln -s $HOME/.config/customs/lemonbar.sh ./lemonbar.sh
 ln -s $HOME/.config/customs/scriptswitcher.sh ./scriptswitcher.sh
+ln -s $HOME/.config/customs/status.sh ./status.sh
 ln -s $HOME/XTerm ./XTerm
 ln -s $HOME/.Xresources ./.Xresources
-ln -s $HOME/.config/qutebrowser/config.py config.py
-ln -s $HOME/.bash_profile .bash_profile
+ln -s $HOME/.config/qutebrowser/config.py ./config.py
+ln -s $HOME/.config/qutebrowser/quickmarks ./quickmarks
+ln -s $HOME/.bash_profile ./.bash_profile
