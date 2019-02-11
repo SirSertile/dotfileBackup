@@ -24,6 +24,8 @@ cp $HOME/.Xresources .Xresources
 cp $HOME/.config/qutebrowser/config.py config.py
 cp $HOME/.config/qutebrowser/quickmarks quickmarks
 cp $HOME/.bash_profile .bash_profile
+cp $HOME/.config/compton/compton.conf
+cp $HOME/.config/gcalcli/oauth
 
 #USER INTERFACE HERE FOR GITHUB LOGIN
 
@@ -44,6 +46,7 @@ cd ..
 rm -r ./dotfiles
 mkdir ./dotfiles
 cd ./dotfiles
+
 #making symlinks
 ln -s $HOME/.xinitrc .xinitrc
 ln -s $HOME/.config/herbstluftwm/autostart ./autostart
@@ -55,3 +58,5 @@ ln -s $HOME/.Xresources ./.Xresources
 ln -s $HOME/.config/qutebrowser/config.py ./config.py
 ln -s $HOME/.config/qutebrowser/quickmarks ./quickmarks
 ln -s $HOME/.bash_profile ./.bash_profile
+ln -s $HOME/.config/compton/compton.conf
+ln -s $HOME/.config/gcalcli/oauth
