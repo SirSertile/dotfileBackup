@@ -47,7 +47,7 @@ hc keybind $Mod-b spawn bash $HOME/Documents/DotfileBackup/backup.sh
 hc keybind $Mod-F3 spawn amixer -c 1 sset Master playback 1%+ 
 hc keybind $Mod-F2 spawn amixer -c 1 sset Master playback 1%-
 #amixer toggle doesn't work for some reason
-hc keybind $Mod-F1 spawn amixer set Master,0 toggle 
+hc keybind $Mod-F1 spawn amixer -c 1 set Master,0 toggle 
 
 #BRIGHTNESS TIME
 hc keybind $Mod-F5 spawn xbacklight -inc -1
@@ -194,7 +194,7 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 # hc detect_monitors
 
 #starting lemonbar
-/home/bluesteelblade/.config/customs/lemonbar.sh
+$HOME/.config/customs/lemonbar.sh
 #| lemonbar -g 600x20+5+5 -B#5c5c5c \
 #-p -f '-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1' \
 #-f 'sans-serif:size=9'

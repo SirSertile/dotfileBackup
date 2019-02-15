@@ -35,11 +35,9 @@ echo
 echo "            " STATUS-UPDATE
 echo "                   "\|
 echo \| DATE: $DATE \| INT-BAT: $BATPERC1%  \|
-echo \| TIME: $TIME " " \| EXT-BAT: $BATPERC2% \| 
-echo 
+echo \| TIME: $TIME " " \| EXT-BAT: $BATPERC2% \| "\n"
 #echo some inspirational quote 
-echo QUOTE-OF-THE-DAY
-echo
+echo QUOTE-OF-THE-DAY"\n"
 echo $QUOTE"\n"
 
 

@@ -24,9 +24,9 @@ cp $HOME/.Xresources .Xresources
 cp $HOME/.config/qutebrowser/config.py config.py
 cp $HOME/.config/qutebrowser/quickmarks quickmarks
 cp $HOME/.bash_profile .bash_profile
-cp $HOME/.config/compton/compton.conf
-cp $HOME/.config/gcalcli/oauth
-cp $HOME/.config/neofetch/config
+cp $HOME/.config/compton/compton.conf compton.conf
+cp $HOME/.config/gcalcli/gcalclirc gcalclirc
+cp $HOME/.config/neofetch/config config 
 
 #USER INTERFACE HERE FOR GITHUB LOGIN
 
@@ -60,5 +60,5 @@ ln -s $HOME/.config/qutebrowser/config.py ./config.py
 ln -s $HOME/.config/qutebrowser/quickmarks ./quickmarks
 ln -s $HOME/.bash_profile ./.bash_profile
 ln -s $HOME/.config/compton/compton.conf ./compton.conf
-ln -s $HOME/.config/gcalcli/oauth ./oauth
+ln -s $HOME/.config/gcalcli/gcalclirc ./gcalclirc
 ln -s $HOME/.config/neofetch/config ./config

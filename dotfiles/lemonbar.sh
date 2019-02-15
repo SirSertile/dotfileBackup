@@ -9,7 +9,8 @@ Battery() {
 }
 network() {
 	timeout 1 ping -c 1 8.8.8.8 >/dev/null 2>&1 &&
-		/usr/bin/printf  "\ue0f0" || /usr/bin/printf " "
+	/usr/bin/printf  "\ue0f0" || /usr/bin/printf "X"
+	#/usr/bin/printf  "\ue0f0" || /usr/bin/printf "X"
 }
 volume() {
 	volume=$(amixer -c 1 get Master | awk '/Mono: Playback/ {print $4}' | tr -d '[]%,')
