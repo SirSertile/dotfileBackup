@@ -1,7 +1,8 @@
 #!/bin/bash
 #defines lists for rofi
-list=("Weather" "Calendar" "Bookmarks" "Games")
+list=("Weather" "Calendar" "Bookmarks" "Games" "Backup")
 calendar=("All" "School" "Personal" "Work")
+backup=("Dotfiles" "User" "System")
 #function takes a list and displays rofi with all the stuff in the lists
 function disprofi {
 	args=($(echo "$@" | tr ' ' '\n'))
@@ -101,6 +102,19 @@ case $(disprofi ${list[*]}) in
 	then
 		bashcommand="cd $HOME/$gamedir; flashplayer $game"
 	fi
+;;
+#BACKUP 
+"${list[4]}")
+	case $(disprofi ${backup[*]}) in
+		"${backup[0]}")
+			#REPLACE WITH LOCATION OF DOTFILE BACKUP
+			command="bash $HOME/Documents/DotfileBackup/backup.sh"
+		;;
+		"${backup[1]}")
+		;;
+		"${backup[2]}")
+		;;
+	esac
 ;;
 *)
 	command=""
