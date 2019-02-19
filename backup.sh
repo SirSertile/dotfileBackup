@@ -27,6 +27,8 @@ cp $HOME/.bash_profile .bash_profile
 cp $HOME/.config/compton/compton.conf compton.conf
 cp $HOME/.config/gcalcli/gcalclirc gcalclirc
 cp $HOME/.config/neofetch/config config 
+cp $HOME/Documents/AutoBackup/autobackup.sh autobackup.sh
+cp $HOME/Documents/AutoBackup/git.sh git.sh
 
 #USER INTERFACE HERE FOR GITHUB LOGIN
 
@@ -62,3 +64,5 @@ ln -s $HOME/.bash_profile ./.bash_profile
 ln -s $HOME/.config/compton/compton.conf ./compton.conf
 ln -s $HOME/.config/gcalcli/gcalclirc ./gcalclirc
 ln -s $HOME/.config/neofetch/config ./config
+ln -s $HOME/Documents/AutoBackup/autobackup.sh autobackup.sh
+ln -s $HOME/Documents/AutoBackup/git.sh git.sh

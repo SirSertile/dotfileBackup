@@ -107,12 +107,16 @@ case $(disprofi ${list[*]}) in
 "${list[4]}")
 	case $(disprofi ${backup[*]}) in
 		"${backup[0]}")
-			#REPLACE WITH LOCATION OF DOTFILE BACKUP
+			#Run dotfileBackup script
+			#Replace with the location of the dotfilebackup script
 			command="bash $HOME/Documents/DotfileBackup/backup.sh"
 		;;
 		"${backup[1]}")
+			#Backup the user
+
 		;;
 		"${backup[2]}")
+			#Backup the system 
 		;;
 	esac
 ;;
