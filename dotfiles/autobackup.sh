@@ -1,11 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 echo "Initializing Backup . . . "
 
 DIRNAME="System Backup for "$(hostname)" on "$( date "+%b %d, %Y %H:%M:%S")
 echo $DIRNAME
 
+# CUT UP ARGUMENTS INTO A LIST
+
 # STEP 1 RSYNC STUFF
-if [ -z "1" ]
+if [ -z "$1" ]
 	then
 	ls
 	echo "Which directory would you like to back up?"
