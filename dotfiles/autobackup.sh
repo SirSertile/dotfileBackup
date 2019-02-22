@@ -15,7 +15,7 @@ if [ -z "$1" ]
 	sudo rsync -aH "$directory" ./"$DIRNAME"
 else
 	sudo rsync -aH $1 ./"$DIRNAME"
-fi 
+fi
 # STEP 2 PUSH TO GOOGLE DRIVE
 drive push -hidden -no-prompt ./"$DIRNAME" 
 
