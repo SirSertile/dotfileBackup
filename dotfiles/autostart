@@ -2,11 +2,13 @@
 # this is a simple config for herbstluftwm
 
 #setting up colors
-outer="Green"
-inner="#002cff"
-active="#002cff"
-transparent="#212121"
-normal="#3a3a3a"
+#source $HOME/.config/customs/colors.sh
+source $THEME
+#outer="Green"
+#inner="#002cff"
+#active="#002cff"
+#border="#212121"
+#normal="#3a3a3a"
 
 hc() {
     herbstclient "$@"
@@ -138,33 +140,53 @@ hc keybind $Mod-i jumpto urgent
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color $active
-hc set frame_border_normal_color $normal
-hc set frame_border_inner_color $transparent
-hc set frame_bg_normal_color $normal
-hc set frame_bg_active_color $active
-hc set frame_border_width 11
-hc set frame_border_inner_width 9
-hc set always_show_frame 1
-hc set frame_bg_transparent 10
-hc set frame_transparent_width 0
-hc set frame_gap 5
-hc set frame_active_opacity 75
-hc set frame_normal_opacity 75
+
+# frame attributes
+
+hc set frame_border_width $frame_border_width
+hc set frame_border_inner_width $frame_border_inner_width
+hc set always_show_frame $always_show_frame
+hc set frame_bg_transparent $frame_bg_transparent
+hc set frame_transparent_width $frame_transparent_width
+hc set frame_gap $frame_gap 
+hc set frame_active_opacity $frame_active_opacity 
+hc set frame_normal_opacity $frame_normal_opacity
+# padding of bar set by the bar size
 hc pad 0 30 5 5 5
 
-hc attr theme.active.color $active
-hc attr theme.normal.color $normal
-hc attr theme.urgent.color orange
-hc attr theme.inner_width 0
-#hc attr theme.inner_color $inner
-hc attr theme.border_width 0
-hc attr theme.floating.border_width 1
-hc attr theme.floating.outer_width 1
-hc attr theme.floating.outer_color $transparent
-hc attr theme.active.inner_color orange
-hc attr theme.active.outer_color $active
-hc attr theme.background_color $inner
+hc attr theme.inner_width $inner_width
+
+hc attr theme.border_width $border_width
+hc attr theme.floating.border_width $floating_border_width
+hc attr theme.floating.outer_width $floating_outer_width
+
+# overall colors
+
+hc attr theme.background_color $background_color
+hc attr theme.normal.color $normal_color
+hc attr theme.urgent.color $urgent_color
+
+# active colors
+
+hc attr theme.active.color $active_color
+hc attr theme.active.inner_color $active_inner_color
+hc attr theme.active.outer_color $active_outer_color 
+
+hc attr theme.floating.outer_color $floating_outer_color
+
+# frame colors
+
+hc set frame_border_active_color $frame_border_active_color
+hc set frame_border_normal_color $frame_border_normal_color
+hc set frame_border_inner_color $frame_border_inner_color
+
+# frame background colors
+
+hc set frame_bg_normal_color $frame_bg_normal_color
+hc set frame_bg_active_color $frame_bg_active_color
+hc attr theme.inner_color $inner_color
+
+# misc
 
 hc set window_gap 0
 hc set frame_padding 0
