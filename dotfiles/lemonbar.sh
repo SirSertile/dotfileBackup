@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+source $THEME
 Clock() {
 	DATETIME=$(date "+%a %b %d, %T")
 	echo "$DATETIME"
@@ -44,22 +45,21 @@ charge() {
 	CHARGING=$(acpi --ac | cut -c12-18)
 	if [ $CHARGING = "on-line" ]
 	then
-		OUT="#05c92f"
+		OUT=$lemoncharge
 	elif [ $CHARGING = "off-lin" ]
 	then
-		OUT="#a3a3a3"
+		OUT=$lemontext
 	fi
 	echo "$OUT"
 }
 textcolor(){
-	echo "#a3a3a3"
+	echo $lemontext
 }
 titlecolor(){
-	echo "#3a3a3a"
+	echo $lemontitle
 }
-
 alertcolor(){
-	echo "#f28a98"
+	echo $lemonalert
 }
 leftbar(){
 	while true; do
