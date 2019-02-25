@@ -34,7 +34,9 @@ cp $HOME/Documents/AutoBackup/git.sh git.sh
 
 xterm -e "cd $HOME/Documents/DotfileBackup;\
 git init; \
-git add --all; \
+git add --all;\
+cd Themes; \
+git add --all;\
 git commit -m 'automatically pushed at $(date)';\
 git push -u origin master;\
 sleep 1"
