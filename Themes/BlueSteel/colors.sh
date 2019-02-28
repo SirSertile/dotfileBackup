@@ -72,7 +72,7 @@ floating_outer_width="1"
 # Lemonbar config
 
 lemonalert=$alertred
-lemonback=$foreground
+lemonback=$background
 lemontext=$brightsteel
 lemontitle=$steelgrey
 lemoncharge=$alertgreen

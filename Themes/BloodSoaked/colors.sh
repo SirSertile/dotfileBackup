@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# "BLUE STEEL BLADE THEME"
+# "BLOOD SOAKED THEME"
 # CONSOLE / XTERM PALETTE
 
 #export THEME=$(realpath $0)
 #echo $THEME
 #echo $(export -p)
 
-background="#5c5e5e"
-foreground="#a3a3a3"
+background="#1C1C1C"
+foreground="#474747"
 black="#242424"
 red="#f28a98"
 green="#a1f28a"
@@ -20,6 +20,8 @@ white="#e0e0e0"
 # CUSTOM NAMED COLORS
 
 midnight="#212121"
+darkestnight="#1C1C1C"
+blackout="#0D0D0D"
 steelgrey="#3a3a3a"
 brightsteel="#a3a3a3"
 alertorange="#ffa447"
@@ -39,19 +41,19 @@ urgent_color=$alertorange
 # active colors
 
 active_color=$bloodred
-active_inner_color=$midnight
+active_inner_color=$darkestnight
 active_outer_color=$bloodred
-floating_outer_color=$midnight
+floating_outer_color=$darkestnight
 
 # frame colors
 
 frame_border_active_color=$bloodred
-frame_border_normal_color=$steelgrey
-frame_border_inner_color=$midnight
+frame_border_normal_color=$midnight
+frame_border_inner_color=$darkestnight
 
 # frame background colors
 
-frame_bg_normal_color=$steelgrey
+frame_bg_normal_color=$midnight
 frame_bg_active_color=$bloodred
 inner_color=''
 
@@ -72,9 +74,9 @@ floating_outer_width="1"
 # Lemonbar config
 
 lemonalert=$alertred
-lemonback=$foreground
-lemontext=$brightsteel
-lemontitle=$steelgrey
+lemonback=$midnight
+lemontext=$bloodred
+lemontitle=$blackout
 lemoncharge=$alertgreen
 
 #feh  --bg-fill '/home/bluesteelblade/Pictures/Wallpapers/goblinslayer.png' 

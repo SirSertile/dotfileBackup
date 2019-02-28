@@ -54,6 +54,8 @@ hc keybind $Mod-F1 spawn amixer -c 1 sset Master playback toggle # amixer -c 1 s
 #BRIGHTNESS TIME
 hc keybind $Mod-F5 spawn xbacklight -inc -1
 hc keybind $Mod-F6 spawn xbacklight -inc 1
+hc keybind $Mod-Control-F5 spawn xbacklight -inc -10
+hc keybind $Mod-Control-F6 spawn xbacklight -inc 10
 
 # basic movement
 # focusing clients

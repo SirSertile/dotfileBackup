@@ -112,7 +112,7 @@ alertbar(){
 
 
 
-leftbar | lemonbar -g 320x20+5+5 -B#5c5c5c \
+leftbar | lemonbar -g 320x20+5+5 -B $lemonback \
 -p -f '-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1' \
 -f '-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1' &
 #-f 'sans-serif:size=9' 
@@ -125,7 +125,7 @@ alertbar | lemonbar -g 310x20+500+5 \
  
 
 
-rightbar | lemonbar -g 200x20+1161+5 -B#5c5c5c \
+rightbar | lemonbar -g 200x20+1161+5 -B $lemonback \
 -p -f '-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1' \
 -f '-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1'
 #-f 'sans-serif:size=9'
