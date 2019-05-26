@@ -27,6 +27,8 @@ compton --config .config/compton/compton.conf &
 #rofi.color-urgent: #3a3a3a, #3a3a3a, #212121 &
 #sleep 2 &
 
+/usr/bin/syndaemon -d -t -k -i 0
+
 # KEEP LAST 2 LINES BUTTING UP AGAINST EACH OTHER
 export THEME="$HOME/.config/customs/colors.sh"
 exec herbstluftwm --locked
