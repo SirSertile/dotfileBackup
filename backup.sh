@@ -38,6 +38,8 @@ git add --all;\
 cd Themes; \
 git add --all;\
 git commit -m 'automatically pushed at $(date)';\
+[ $(timeout 1 ping github.com) -n ] && \
+echo 'No connection to Github - Push not attempted' || \
 git push -u origin master;\
 sleep 1"
 herbstclient close_or_remove
