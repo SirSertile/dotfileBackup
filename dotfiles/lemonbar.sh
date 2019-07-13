@@ -16,7 +16,7 @@ anetwork() {
 network() {
 	# using iwconfig makes it not fucking	 spray pings everywhere 
 	# SSID = $(sudo iwconfig wlp3s0 | grep ESSID: | cut -d: -f2)
-	[ $(sudo iwconfig wlp3s0 | grep ESSID: | cut -d: -f2) -n ] && /usr/bin/printf "X" || /usr/bin/printf  "\ue0f0"
+	[ $(sudo iwconfig wlp3s0 | grep ESSID: | cut -d: -f2) -nB ] && /usr/bin/printf "X" || /usr/bin/printf  "\ue0f0"
 	#/usr/bin/printf  "\ue0f0" || /usr/bin/printf "X"
 }
 volume() {
@@ -83,6 +83,7 @@ rightbar(){
 	done
 }
 alertbar(){
+	on=0
 	while true; do
 		#internal battery
 		BATPERC1=$(acpi --battery | cut -d, -f2 | grep -m 1 % | cut -d '%' -f1 | tr -d [:space:])
@@ -110,7 +111,15 @@ alertbar(){
 		then
 			echo ""
 		else 
-			echo "%{c} %{F$(alertcolor)}$ALERTS" 
+			
+			if [ $on -eq 1 ]
+			then 
+				on=0
+				echo "%{c} %{F$(alertcolor)}$ALERTS" 
+			else
+				on=1
+				echo ""
+			fi
 		fi
 		sleep 1
 	done
@@ -120,7 +129,7 @@ alertbar(){
 
 leftbar | lemonbar -g 320x20+5+5 -B $lemonback \
 -p -f '-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1' \
--f '-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1' &
+-f '-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1' & \
 #-f 'sans-serif:size=9' 
 
 
