@@ -14,9 +14,9 @@ anetwork() {
 	#/usr/bin/printf  "\ue0f0" || /usr/bin/printf "X"
 }
 network() {
-	# using iwconfig makes it not fucking spray pings everywhere 
+	# using iwconfig makes it not fucking	 spray pings everywhere 
 	# SSID = $(sudo iwconfig wlp3s0 | grep ESSID: | cut -d: -f2)
-	timeout 1 [ $(sudo iwconfig wlp3s0 | grep ESSID: | cut -d: -f2) = "off/any" ] && /usr/bin/printf "X" || /usr/bin/printf  "\ue0f0"
+	[ $(sudo iwconfig wlp3s0 | grep ESSID: | cut -d: -f2) -n ] && /usr/bin/printf "X" || /usr/bin/printf  "\ue0f0"
 	#/usr/bin/printf  "\ue0f0" || /usr/bin/printf "X"
 }
 volume() {
