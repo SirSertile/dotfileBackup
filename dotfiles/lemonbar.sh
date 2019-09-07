@@ -8,15 +8,15 @@ Battery() {
 	BATPERC=$(acpi --battery | cut -d, -f2)
 	echo $BATPERC
 }
-anetwork() {
+network() {
 	timeout 1 ping -c 1 8.8.8.8 >/dev/null 2>&1 &&
 	/usr/bin/printf  "\ue0f0" || /usr/bin/printf "X"
 	#/usr/bin/printf  "\ue0f0" || /usr/bin/printf "X"
 }
-network() {
+anetwork() {
 	# using iwconfig makes it not fucking	 spray pings everywhere 
 	# SSID = $(sudo iwconfig wlp3s0 | grep ESSID: | cut -d: -f2)
-	[ $(sudo iwconfig wlp3s0 | grep ESSID: | cut -d: -f2) -nB ] && /usr/bin/printf "X" || /usr/bin/printf  "\ue0f0"
+	[[ -z $(sudo iwconfig wlp3s0 | grep ESSID: | cut -d: -f2) ]] && /usr/bin/printf "X" || /usr/bin/printf  "\ue0f0"
 	#/usr/bin/printf  "\ue0f0" || /usr/bin/printf "X"
 }
 volume() {
