@@ -1,11 +1,7 @@
-#!/bash/sh
+#!/bin/sh
 #Script automatically copies my dotfiles to a folder and backs them up to Github.
 #Leaves behind symlinked files.
 
-#copy files to the directory
-inittag="$(herbstclient attr tags.focus.name)"
-herbstclient add BACKUP
-herbstclient use BACKUP
 #linking of files
 #copy the current dotfiles to the current address, then delete them after
 cd $HOME/Documents/DotfileBackup
@@ -26,12 +22,17 @@ cp $HOME/.config/qutebrowser/quickmarks quickmarks
 cp $HOME/.bash_profile .bash_profile
 cp $HOME/.config/compton/compton.conf compton.conf
 cp $HOME/.config/gcalcli/gcalclirc gcalclirc
-cp $HOME/.config/neofetch/config config 
+cp $HOME/.config/neofetch/config config
 cp $HOME/Documents/AutoBackup/autobackup.sh autobackup.sh
 cp $HOME/Documents/AutoBackup/git.sh git.sh
 
 #USER INTERFACE HERE FOR GITHUB LOGIN
 
+#copy files to the directory
+inittag="$(herbstclient attr tags.focus.name)"
+herbstclient add BACKUP
+herbstclient use BACKUP
+echo "Something should happen"
 xterm -e "cd $HOME/Documents/DotfileBackup;\
 git init; \
 git add --all;\
@@ -42,6 +43,8 @@ git commit -m 'automatically pushed at $(date)';\
 echo 'No connection to Github - Push not attempted' || \
 git push -u origin master;\
 sleep 1"
+xterm
+echo "did something happen"
 herbstclient close_or_remove
 herbstclient use $inittag
 herbstclient merge_tag BACKUP $inittag
