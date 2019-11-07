@@ -33,17 +33,16 @@ inittag="$(herbstclient attr tags.focus.name)"
 herbstclient add BACKUP
 herbstclient use BACKUP
 echo "Something should happen"
-xterm -e "cd $HOME/Documents/DotfileBackup;\
+xterm -e 'cd $HOME/Documents/DotfileBackup;\
 git init; \
 git add --all;\
 cd Themes; \
 git add --all;\
-git commit -m 'automatically pushed at $(date)';\
-[ $(timeout 1 ping -n 1 github.com) -n ] && \
-echo 'No connection to Github - Push not attempted' || \
+git commit -m "automatically pushed at $(date)";\
+[ -n "$(timeout 1 ping github.com)" ] && \
+echo "No connection to Github - Push not attempted" || \
 git push -u origin master;\
-sleep 1"
-echo "did something happen"
+sleep 1'
 herbstclient close_or_remove
 herbstclient use $inittag
 herbstclient merge_tag BACKUP $inittag
