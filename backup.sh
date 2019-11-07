@@ -40,8 +40,7 @@ cd Themes; \
 git add --all;\
 git commit -m "automatically pushed at $(date)";\
 [ -n "$(timeout 1 ping github.com)" ] && \
-echo "No connection to Github - Push not attempted" || \
-git push -u origin master;\
+git push -u origin master || echo "No connection to Github - Push not attempted"; \
 sleep 1'
 herbstclient close_or_remove
 herbstclient use $inittag
