@@ -43,7 +43,6 @@ git commit -m 'automatically pushed at $(date)';\
 echo 'No connection to Github - Push not attempted' || \
 git push -u origin master;\
 sleep 1"
-xterm
 echo "did something happen"
 herbstclient close_or_remove
 herbstclient use $inittag
