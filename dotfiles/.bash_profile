@@ -1,1 +1,2 @@
-/home/bluesteelblade/.bash_profile
+#!/bin/bash
+$HOME/.config/customs/status.sh

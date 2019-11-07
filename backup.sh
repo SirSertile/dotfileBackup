@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #Script automatically copies my dotfiles to a folder and backs them up to Github.
 #Leaves behind symlinked files.
 
