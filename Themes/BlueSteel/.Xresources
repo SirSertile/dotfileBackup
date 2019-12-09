@@ -4,3 +4,40 @@ rofi.color-active: #3a3a3a, #3a3a3a, #212121
 rofi.color-urgent: #3a3a3a, #3a3a3a, #212121
 #rofi.font:'-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1'
 #rofi.font:'-ctrld-fixed-medium-r-normal--16-100-96-96-c-80-iso10646-1'
+
+! special
+*.foreground:   #a3a3a3
+*.background:   #5c5e5e
+*.cursorColor:  #a3a3a3
+
+! black
+*.color0:       #242424
+*.color8:       #242424
+
+! red
+*.color1:       #f28a98
+*.color9:       #f28a98
+
+! green
+*.color2:       #a1f28a
+*.color10:      #a1f28a
+
+! yellow
+*.color3:       #eaf28a
+*.color11:      #eaf28a
+
+! blue
+*.color4:       #4a63ed
+*.color12:      #4a63ed
+
+! magenta
+*.color5:       #e68af2
+*.color13:      #e68af2
+
+! cyan
+*.color6:       #8aedf2
+*.color14:      #8aedf2
+
+! white
+*.color7:       #e0e0e0
+*.color15:      #e0e0e0
