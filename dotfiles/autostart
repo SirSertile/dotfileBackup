@@ -46,8 +46,8 @@ hc keybind $Mod-Mod1-Return spawn bash $HOME/.config/customs/scriptswitcher.sh
 hc keybind $Mod-b spawn bash $HOME/Documents/DotfileBackup/backup.sh
 
 #AUDIO TIME
-hc keybind $Mod-F3 spawn amixer -c 1 sset Master playback 1%+ 
-hc keybind $Mod-F2 spawn amixer -c 1 sset Master playback 1%-
+hc keybind $Mod-F3 spawn amixer sset Master playback 1%+ 
+hc keybind $Mod-F2 spawn amixer sset Master playback 1%-
 #amixer toggle doesn't work for some reason??
 hc keybind $Mod-F1 spawn amixer sset Master playback toggle # amixer -c 1 sset Speaker unmute
 
