@@ -21,3 +21,4 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 #make ctrl-v exit the passthrough mode
 config.bind('<Ctrl-v>', 'leave-mode', mode='passthrough')
 config.unbind('<Shift-Escape>', mode='passthrough')
+config.load_autoconfig()

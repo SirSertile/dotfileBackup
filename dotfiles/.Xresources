@@ -5,10 +5,17 @@ rofi.color-urgent: #3a3a3a, #3a3a3a, #212121
 #rofi.font:'-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1'
 #rofi.font:'-ctrld-fixed-medium-r-normal--16-100-96-96-c-80-iso10646-1'
 
+#! special
+#*.foreground:   #a3a3a3
+#Xterm.foreground:   #a3a3a3
+#*.background:   #5c5e5e
+#*.cursorColor:  #a3a3a3
+
 ! special
-*.foreground:   #a3a3a3
-*.background:   #5c5e5e
-*.cursorColor:  #a3a3a3
+*.foreground:   #dedede
+Xterm.foreground:   #a3a3a3
+*.background:   #797979
+*.cursorColor:  #dedede
 
 ! black
 *.color0:       #242424

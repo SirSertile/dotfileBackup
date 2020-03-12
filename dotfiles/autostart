@@ -30,7 +30,7 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Return spawn ${TERMINAL:-xterm -font '-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1'} # use your $TERMINAL with xterm as fallback
 
 #fonts
-#ctrld font
+#ctrld fontsoy
 #-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1
 
 #FANCY KEYBINDS HERE
@@ -49,7 +49,7 @@ hc keybind $Mod-b spawn bash $HOME/Documents/DotfileBackup/backup.sh
 hc keybind $Mod-F3 spawn amixer -c 1 sset Master playback 1%+ 
 hc keybind $Mod-F2 spawn amixer -c 1 sset Master playback 1%-
 #amixer toggle doesn't work for some reason??
-hc keybind $Mod-F1 spawn amixer -c 1 sset Master playback toggle # amixer -c 1 sset Speaker unmute
+hc keybind $Mod-F1 spawn amixer sset Master playback toggle # amixer -c 1 sset Speaker unmute
 
 #BRIGHTNESS TIME
 hc keybind $Mod-F5 spawn xbacklight -inc -1
