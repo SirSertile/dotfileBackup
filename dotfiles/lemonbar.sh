@@ -1,4 +1,4 @@
-m#!/bin/bash
+#!/bin/bash
 source $THEME
 Clock() {
 	DATETIME=$(date "+%a %b %d, %T")
@@ -26,8 +26,12 @@ volume() {
 	volume=$(amixer -c 1 get Master | awk '/Mono: Playback/ {print $4}' | tr -d '[]%,')
 	if [ "$(amixer -c 1 get Master | grep -c off)" -eq "0" ]
 	then
-		if [ ${#volume} ]
-		echo $volume
+		# Makes sure the length is the same regardless if volume is at 100 
+		if [ ${#volume} -lt 3 ]; then
+			echo $volume" "
+		else
+			echo $volume
+		fi
 	else
 		echo MM
 		#/usr/bin/printf "\ue202"
