@@ -25,7 +25,7 @@ hc keyunbind --all
 Mod=Mod4   # Use the super key as the main modifier
 
 #hc keybind $Mod-Shift-q quit
-hc keybind $Mod-Shift-r reload
+hc keybind $Mod-Shift-r reload 
 #hc keybind $Mod-Shift-c close_or_remove
 hc keybind $Mod-Return spawn ${TERMINAL:-xterm -font '-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1'} # use your $TERMINAL with xterm as fallback
 

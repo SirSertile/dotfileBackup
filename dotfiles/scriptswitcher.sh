@@ -1,6 +1,6 @@
 #!/bin/bash
 #defines lists for rofi
-list=("Weather" "Calendar" "Bookmarks" "Games" "Backup")
+list=("Weather" "Bookmarks" "Games" "Backup")
 calendar=("All" "School" "Personal" "Work")
 backup=("Dotfiles" "User" "System")
 #function takes a list and displays rofi with all the stuff in the lists
@@ -27,27 +27,27 @@ case $(disprofi ${list[*]}) in
 "${list[0]}")
 	command="curl wttr.in/?m;read"
 	;;
-#CALENDAR
+#CALENDAR ( BROKEN CURRENTLY )
 "${list[1]}")
-	case $(disprofi ${calendar[*]}) in
+	: 'case $(disprofi ${calendar[*]}) in
 		#ALL
 		${calendar[0]})
-			command="gcalcli calw 1 --configFolder /home/bluesteelblade/.config/gcalcli/ --calendar 'Class of 2022 Events' --calendar 'LCDI shifts' --calendar 'rezdevhead@gmail.com' --calendar 'david.serate@mymail.champlain.edu' --calendar 'Champlain Fall 2018 Semester'"
+			command="gcalcli calw 1 --config-folder $HOME/.config/gcalcli/ --calendar 'Class of 2022 Events' --calendar 'LCDI shifts' --calendar 'rezdevhead@gmail.com' --calendar 'david.serate@mymail.champlain.edu' --calendar 'Champlain Fall 2018 Semester'"
 		;;
 		#WORK
 		${calendar[2]})
-			command="gcalcli calw 1 --configFolder /home/bluesteelblade/.config/gcalcli/ --calendar 'LCDI shifts'"
+			command="gcalcli calw 1 --config-folder $HOME/.config/gcalcli/ --calendar 'LCDI shifts'"
 		;;
 		#SCHOOL
 		${calendar[1]})
-			command="gcalcli calw 1 --configFolder /home/bluesteelblade/.config/gcalcli/ --calendar 'Class of 2022 Events' --calendar 'LCDI shifts' --calendar 'david.serate@mymail.champlain.edu' --calendar 'Champlain Fall 2018'"
+			command="gcalcli calw 1 --config-folder $HOME/.config/gcalcli/ --calendar 'Class of 2022 Events' --calendar 'LCDI shifts' --calendar 'david.serate@mymail.champlain.edu' --calendar 'Champlain Fall 2018'"
 		;;
 		#PERSONAL
 		${calendar[3]})
-			command="gcalcli calw 1 --configFolder /home/bluesteelblade/.config/gcalcli/ --calendar 'rezdevhead@gmail.com'"
+			command="gcalcli calw 1 --config-folder /home/bluesteelblade/.config/gcalcli/ --calendar 'rezdevhead@gmail.com'"
 		;;
 	esac
-	command="$command;read"
+	command="$command;read"'
 	;;
 "${list[2]}")
 	#handles bookmarks

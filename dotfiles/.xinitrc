@@ -29,7 +29,7 @@ compton --config .config/compton/compton.conf &
 
 /usr/bin/syndaemon -d -t -k -i 0
 
-
+xrdb -merge ~/.Xresources
 
 # KEEP LAST 2 LINES BUTTING UP AGAINST EACH OTHER
 export THEME="$HOME/.config/customs/colors.sh"

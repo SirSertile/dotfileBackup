@@ -1,4 +1,4 @@
-#!/bin/bash
+m#!/bin/bash
 source $THEME
 Clock() {
 	DATETIME=$(date "+%a %b %d, %T")
@@ -26,6 +26,7 @@ volume() {
 	volume=$(amixer -c 1 get Master | awk '/Mono: Playback/ {print $4}' | tr -d '[]%,')
 	if [ "$(amixer -c 1 get Master | grep -c off)" -eq "0" ]
 	then
+		if [ ${#volume} ]
 		echo $volume
 	else
 		echo MM
@@ -75,7 +76,7 @@ leftbar(){
 		#	echo -e "\ue044" %{c} %{F$(titlecolor)}NET: %{F$(textcolor)}$(network)    %{F$(titlecolor)}CLK: %{F$(textcolor)}$(Clock)    %{F$(titlecolor)}VOL: %{F$(textcolor)}$(volume)    %{F$(titlecolor)}HEAT: %{F$(textcolor)}$(Heat)    %{F$(titlecolor)}BAT: %{F$(charge)}$(Battery)"
 		#	/usr/bin/printf "\ue00b test" 
 		#/usr/bin/printf
-		echo "%{c} %{F$(titlecolor)}NET: %{F$(textcolor)}$(bnetwork)  %{F$(titlecolor)}VOL: %{F$(textcolor)}$(volume)  %{F$(titlecolor)}HEAT: %{F$(textcolor)}$(Heat)  %{F$(titlecolor)}BAT: %{F$(charge)}$(Battery)"
+		echo -e "%{c} %{F$(titlecolor)}NET: %{F$(textcolor)}$(bnetwork)  %{F$(titlecolor)}VOL: %{F$(textcolor)}$(volume)  %{F$(titlecolor)}HEAT: %{F$(textcolor)}$(Heat)  %{F$(titlecolor)}BAT: %{F$(charge)}$(Battery)"
 		sleep 1
 	done
 }
@@ -118,7 +119,7 @@ alertbar(){
 			if [ $on -eq 1 ]
 			then 
 				on=0
-				echo "%{c} %{F$(alertcolor)}$ALERTS" 
+				echo -e "%{c} %{F$(alertcolor)}\ue1aa$ALERTS \ue1ac" 
 			else
 				on=1
 				echo ""

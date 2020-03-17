@@ -1,6 +1,8 @@
-rofi*.color-normal: #001c1c1c, #fff5f5f5, #001c1c1c, #fff5f5f5, #ff030303
-rofi*.color-window: #e61c1c1c, #ff4f4f4f, #e6f5f5f5
-!rofi.font:-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1
+rofi*.color-normal: #3A3A3A, #212121, #3a3a3a, #3a3a3a, #002cff
+rofi*.color-window: #3a3a3a, #3a3a3a, #212121
+rofi*.color-active: #3a3a3a, #3a3a3a, #212121
+rofi*.color-urgent: #3a3a3a, #3a3a3a, #212121
+!rofi.font:'-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1'
 !rofi.font:'-ctrld-fixed-medium-r-normal--16-100-96-96-c-80-iso10646-1'
 
 ! special
@@ -38,11 +40,11 @@ xterm*.color14:      #4f4f4f
 
 ! white
 xterm*.color7:       #f5f5f5
-xterm*.color15:      #f5f5f5
+xterm*.color15:      #f5f2f2
 
 
 xterm*.transparent:true
-!xterm*.font:-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1
+xterm*.font:-ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1
 !Xterm*faceSize: 10
 
 !ctrld font
